@@ -80,3 +80,5 @@ Requirements:
   <pre>JAVA_OPTS="$JAVA_OPTS <b>-Dspring.profiles.active=prod</b>"</pre>
 5. Deploy the WAR file to Tomcat (or other web server).
 6. Go to `http://your-server-address/blog` (if deployed with default Tomcat settings) to see if it is working.
+
+New build
