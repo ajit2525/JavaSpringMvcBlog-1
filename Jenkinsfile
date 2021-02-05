@@ -11,20 +11,9 @@ node
  stage ('Sonarqube ') 
 { 
   withSonarQubeEnv('jenkins_sonarqube') { 
-   sh "mvn sonar:sonar" 
+   sh "mvn verify sonar:sonar" 
   } 
- } 
-   stage("Quality Gate Check") 
- { 
-  timeout(time: 1, unit: 'HOURS') 
- { 
-   def qg = waitForQualityGate() 
-   if (qg.status != 'OK') 
-{ 
-  error "Pipeline aborted due to quality gate failure: ${qg.status}" 
-    } 
-   } 
- } 
+ }  
  try 
  { 
   stage ('Build Package') 
