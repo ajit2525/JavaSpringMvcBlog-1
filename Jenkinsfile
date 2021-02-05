@@ -10,7 +10,7 @@ node
 } 
  stage ('Sonarqube ') 
 { 
-  withSonarQubeEnv('jenkins_sonarqube') { 
+  withSonarQubeEnv('Sonarqube') { 
    sh "mvn verify sonar:sonar" 
   } 
  }  
@@ -32,7 +32,7 @@ node
  }
  stage ('Artifact upload') 
 { 
-  def server = Artifactory.server 'jenkins_artifactory' def uploadSpec = """{ 
+  def server = Artifactory.server 'Artifactory' def uploadSpec = """{ 
   "files": [ 
     { 
       "pattern": "/var/lib/jenkins/workspace/PluralSight1/target/*.war",
