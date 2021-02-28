@@ -10,7 +10,7 @@ node
 } 
  stage ('Sonarqube ') 
 { 
-  withSonarQubeEnv('Sonarqube') { 
+  withSonarQubeEnv('SONARQUBE') { 
    sh "mvn verify sonar:sonar" 
   } 
  }  
