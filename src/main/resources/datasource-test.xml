@@ -5,7 +5,7 @@
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="org.hsqldb.jdbcDriver" />
         <property name="url" value="jdbc:hsqldb:mem:blog" />
-        <property name="username" value="BlogDbUser" />
+        <property name="username" value="ajit" />
         <property name="testOnBorrow" value="true"/>
         <property name="validationQuery" value="SELECT 1 FROM INFORMATION_SCHEMA.SYSTEM_USERS"/>
     </bean>
